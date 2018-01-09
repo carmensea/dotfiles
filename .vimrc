@@ -105,6 +105,10 @@ endif
  map <C-n> <plug>NERDTreeTabsToggle<CR>
  map <C-m> :TagbarToggle<CR>
  nnoremap <C-p> "+gP"
+ "To get copy and paste to work, you need to have +clipboard for vim
+ "brew vim options
+ "brew install vim --with-client-server
+ "this sets +clipboard
  vmap <C-t> "*y
 
  cmap w!! %!sudo tee > /dev/null/ %

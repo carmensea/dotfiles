@@ -12,9 +12,9 @@ select-pane -t 2
 split-window -h -p 50
 
 # run commands
-send -t 0 dbc ENTER
-send -t 1 dbc ENTER
-send -t 2 dbc ENTER
-send -t 3 dbc ENTER
+send -t 0 workspace ENTER
+send -t 1 workspace ENTER
+send -t 2 workspace ENTER
+send -t 3 workspace ENTER
 
 select-pane -t 0

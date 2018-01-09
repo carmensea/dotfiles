@@ -23,7 +23,6 @@ source $HOME/.zsh_profile
 # Plugins to load, loc in  ~/.oh-my-zsh/custom/plugins/ Ex: plugins=(rails git textmate ruby lighthouse)
 plugins=(git github vundle ruby rails encode64 tmux)
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/oh-my-zsh.sh
 
 #export TERM="xterm-256color"
