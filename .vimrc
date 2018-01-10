@@ -32,6 +32,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Functional Plugins
 Plugin 'itchyny/calendar.vim'
@@ -47,11 +48,11 @@ Plugin 'tpope/vim-fugitive'               "Adds git commands like :Gdiff, :Gstat
 "Search Plugins
 Plugin 'tpope/vim-unimpaired'
 Plugin 'msanders/snipmate.vim'
-Plugin 'ctrlp/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 
 "Syntax Highlighting Plugins
 Plugin 'scrooloose/syntastic'
+Plugin 'gcorne/vim-sass-lint'
 Plugin 'tpope/vim-rails'                  "Syntax + error highlight for rails
 Plugin 'tpope/vim-haml'                   "Syntax highlight for haml
 Plugin 'pangloss/vim-javascript'
@@ -64,6 +65,8 @@ call vundle#end()
 filetype plugin indent on "req
 
 "Vim Multiple Cursors Bindings
+let g:syntastic_sass_checkers=["sasslint"]
+let g:syntastic_scss_checkers=["sasslint"]
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
 "let g:multi_cursor_next_key='<C-n>'
