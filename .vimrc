@@ -58,9 +58,9 @@ Plugin 'tpope/vim-haml'                   "Syntax highlight for haml
 Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
 Plugin 'ianks/vim-tsx'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on "req
@@ -132,7 +132,6 @@ set showtabline=2 " always show tab bar
 set term=cons25   " fix issue with arrow keys
 
 " Editting configuration
-syntax on
 syntax enable
 set pastetoggle=<F2> 
 set term=screen-256color
@@ -263,4 +262,6 @@ nmap <F12> :vs ~/github.com/carmensea/dotfiles/Sharpen.md
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets.json')), "\n"))
 
 map <F10> :set invnumber
+
+vnoremap <silent> <leader>l :<C-U>REPLSendLine<cr>
 vnoremap <C-p> "+gP"
