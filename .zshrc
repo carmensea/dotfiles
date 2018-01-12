@@ -25,6 +25,8 @@ plugins=(git github vundle ruby rails encode64 tmux)
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 #export TERM="xterm-256color"
 if [ "$TMUX" = "" ]; then tmux; fi
 #PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
