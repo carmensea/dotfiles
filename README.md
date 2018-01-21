@@ -1,5 +1,6 @@
 navigating my jawn:  
 
+VIM:
 :%s/SEARCH/REPLACE/gc - this finds and replaces while asking you per instance
 i = insert mode  
 o = insert on new line  
@@ -10,18 +11,6 @@ ctr t = yank (copy)
 ctr v = visual block (ycan highlight by characters (up, down, left/right))  
 shift v = highlights an entire line (use this in conjuction with yank or delete)  
 ctrl n = open and close nerd tree  
-;q = quit  
-;w = write  
-;wq = write quit  
-;q! = force quit  
-;wq! = force write quite  
-;vs [file] = vertical split (put a space and you can tab into a new file)  
-;e [file] = change into new file  
-ctr f | = adds another pane vertically. good for debugging, irb, running ruby.   
-ctrl l = moves from your pane to the right pane  
-ctrl h = moves from your pane to the left pane  
-ctrl j = moves from your pane down  
-ctr k = moves from your pane up  
 j = moves down  
 k = moves up  
 l = moves right  
@@ -35,8 +24,22 @@ ctr r = redo
 shift d = deletes from cursor to the end of line  
 dd = deletes an entire line  
 ctrl u = page up  
-ctr d = page down  
+ctrl d = page down  
 gg = goes to the top of file  
 shift g = goes to the bottom of file  
-. = repeats whatever you just did. helps with tedious tasks  
+.   = repeats whatever you just did. helps with tedious tasks  
 fn f10 = setinvnumber (gets rid of line count.)
+;q = quit  
+;w = write  
+;wq = write quit  
+;q! = force quit  
+;wq! = force write quite  
+;vs [file] = vertical split (put a space and you can tab into a new file)  
+;e [file] = change into new file  
+
+TMUX:
+ctr f | = adds another pane vertically. good for debugging, irb, running ruby.   
+ctrl l = moves from your pane to the right pane  
+ctrl h = moves from your pane to the left pane  
+ctrl j = moves from your pane down  
+ctr k = moves from your pane up  
