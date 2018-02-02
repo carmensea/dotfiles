@@ -2,6 +2,7 @@ navigating my jawn:
 
 VIM:
 :%s/SEARCH/REPLACE/gc - this finds and replaces while asking you per instance
+ds( = deletes outer parenthesis
 i = insert mode  
 o = insert on new line  
 p = paste on new line  
