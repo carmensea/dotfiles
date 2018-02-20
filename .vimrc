@@ -55,12 +55,10 @@ Plugin 'scrooloose/syntastic'
 Plugin 'gcorne/vim-sass-lint'
 Plugin 'tpope/vim-rails'                  "Syntax + error highlight for rails
 Plugin 'tpope/vim-haml'                   "Syntax highlight for haml
-Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
-Plugin 'ianks/vim-tsx'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on "req
@@ -79,9 +77,14 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:ycm_min_num_of_chars_for_completion = 6
 "python from powerline.bindings.vim impor 'source_plugin; source_plugin()
 let g:nerdtree_tabs_open_on_console_startup=0
+let NERDTreeShowHidden=1
 "colorscheme solarized
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml"    
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 let g:closetag_emptyTags_caseSensitive = 1
+"displays all errors from all checkers together
+let g:syntastic_aggregate_errors = 1
+let g:vim_jsx_pretty_colorful_config = 1
+let g:airline#extensions#labline#left_sep = ' '
 set background=dark
 
 if has('gui_running')
@@ -113,7 +116,6 @@ endif
  "brew vim options
  "brew install vim --with-client-server
  "this sets +clipboard
- vmap <C-t> "*y
 
  cmap w!! %!sudo tee > /dev/null/ %
 
@@ -252,6 +254,13 @@ endif
 " tmux knows the extended mouse mode
 nnoremap <leader>. :CtrlPTag<cr>
 
+"Ctags
+"map \c to run ctags in folder
+map <Leader>c :! ctags -R -f ./.git/tags .<CR>
+" Ctrl+[ to so that manuevering ctags is simply Ctrl+] to go down and Ctrl+[ to go up
+nnoremap <Leader>[ <C-t>
+nnoremap <Leader>] <C-]>
+
 " Auto open tagbar
 "autocmd VimEnter * nested :call tagbar#autoopen(1)
 nmap <F8> :TagbarToggle<CR>
@@ -265,3 +274,4 @@ map <F10> :set invnumber
 
 vnoremap <silent> <leader>l :<C-U>REPLSendLine<cr>
 vnoremap <C-p> "+gP"
+vnoremap <C-t> "*y

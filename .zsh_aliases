@@ -4,5 +4,13 @@ alias get='curl -OL'
 
 alias lr='ls -hartl'
 
-alias work="cd ~/workspace"
+alias b_client="cd ~/workspace/brandless.com/client"
+alias b_rails="cd ~/workspace/brandless.com"
+alias brandless="cd ~/workspace/brandless.com"
 alias dot="cd ~/dotfiles"
+alias ctags="`brew --prefix`/bin/ctags"
+
+#git
+alias gap='git add --intent-to-add . && git add --patch'
+alias gc='git commit -v'
+alias gpoh='git push origin HEAD'
