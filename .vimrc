@@ -216,6 +216,9 @@ nnoremap Q <nop>
 :match ExtraWhitespace /\s\+$\| \+\ze\t/ " Show trailing whitespace and spaces before a tab
 :match ExtraWhitespace /[^\t]\zs\t\+/    " Show tabs that are not at the start of a line
 
+"Automatically strip trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 cnoreabbrev td tab drop
 
 " RSpec.vim mappings
