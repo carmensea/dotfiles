@@ -14,3 +14,12 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias gap='git add --intent-to-add . && git add --patch'
 alias gc='git commit -v'
 alias gpoh='git push origin HEAD'
+
+#js
+alias s_test='./script/start-test'
+alias s_yarn='yarn build:development'
+alias lint='yarn run lint'
+
+#ruby
+alias rs='rails server'
+alias rc='rails console'

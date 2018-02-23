@@ -111,11 +111,13 @@ endif
  map <C-h> <C-w><Left>
  map <C-n> <plug>NERDTreeTabsToggle<CR>
  map <C-m> :TagbarToggle<CR>
- nnoremap <C-p> "+gP"
  "To get copy and paste to work, you need to have +clipboard for vim
  "brew vim options
  "brew install vim --with-client-server
  "this sets +clipboard
+vnoremap <C-t> "*y
+nnoremap <C-p> "+gP"
+vnoremap <C-p> "+gP"
 
  cmap w!! %!sudo tee > /dev/null/ %
 
@@ -253,12 +255,17 @@ endif
 
 " tmux knows the extended mouse mode
 nnoremap <leader>. :CtrlPTag<cr>
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }" Ignore some folders and files for CtrlP indexing
 
 "Ctags
 "map \c to run ctags in folder
 map <Leader>c :! ctags -R -f ./.git/tags .<CR>
 " Ctrl+[ to so that manuevering ctags is simply Ctrl+] to go down and Ctrl+[ to go up
-nnoremap <Leader>[ <C-t>
+nnoremap <Leader>[ <C-j>
 nnoremap <Leader>] <C-]>
 
 " Auto open tagbar
@@ -273,5 +280,3 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets
 map <F10> :set invnumber
 
 vnoremap <silent> <leader>l :<C-U>REPLSendLine<cr>
-vnoremap <C-p> "+gP"
-vnoremap <C-t> "*y

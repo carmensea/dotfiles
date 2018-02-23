@@ -17,6 +17,7 @@
 --exclude=\*.bak
 --exclude=tags
 --exclude=node_modules
+--exclude=client/bower_components
 --exclude=bower_components
 --exclude=test
 --exclude=__test__
