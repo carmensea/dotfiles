@@ -50,6 +50,9 @@ ctrl l = moves from your pane to the right pane
 ctrl h = moves from your pane to the left pane  
 ctrl j = moves from your pane down  
 ctrl k = moves from your pane up  
-
+ctrl r = search previous commands  
+ctrl w = delete word  
+ctrl e = move to end of line  
+ctrl a = move to beginning of line
 OUTSIDE WORLD:  
 cmd v: paste
