@@ -53,6 +53,7 @@ ctrl k = moves from your pane up
 ctrl r = search previous commands  
 ctrl w = delete word  
 ctrl e = move to end of line  
-ctrl a = move to beginning of line
-OUTSIDE WORLD:  
+ctrl a = move to beginning of line  
+
+OUTSIDE WORLD:  
 cmd v: paste
