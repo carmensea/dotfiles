@@ -38,6 +38,7 @@ fn f10 = setinvnumber (gets rid of line count.)
 ;wq! = force write quite  
 ;vs [file] = vertical split (put a space and you can tab into a new file)  
 ;e [file] = change into new file    
+;Gblame = git blame  
 
 FILE SEARCH WITHIN VIM  
 ctrl p = find a file by name  
