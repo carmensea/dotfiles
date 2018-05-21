@@ -7,8 +7,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 set clipboard=unnamedplus
+"execute pathogen#infect()
 
-nmap <F9> :vs ~/devbootcamp/notes
+:let @" = expand("%")
 
 Plugin 'tpope/vim-endwise'
 
@@ -23,7 +24,6 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
-"Plugin 'Valloric/YouCompleteMe'
 
 "Navigation Plugins
 Plugin 'scrooloose/nerdtree'
@@ -41,13 +41,13 @@ Plugin 'bling/vim-airline'
 Plugin 'wincent/command-t'
 Plugin 'thoughtbot/vim-rspec'
 
+
 "Git Plugins
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'               "Adds git commands like :Gdiff, :Gstatus
 
 "Search Plugins
 Plugin 'tpope/vim-unimpaired'
-Plugin 'msanders/snipmate.vim'
 Plugin 'mileszs/ack.vim'
 
 "Syntax Highlighting Plugins
@@ -137,7 +137,7 @@ set term=cons25   " fix issue with arrow keys
 
 " Editting configuration
 syntax enable
-set pastetoggle=<F2> 
+set pastetoggle=<F2>
 set term=screen-256color
 set ts=2
 set smarttab
@@ -217,7 +217,7 @@ nnoremap Q <nop>
 :match ExtraWhitespace /[^\t]\zs\t\+/    " Show tabs that are not at the start of a line
 
 "Automatically strip trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\s\+$//e
 
 cnoreabbrev td tab drop
 

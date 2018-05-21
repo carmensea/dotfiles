@@ -1,0 +1,6 @@
+pane	0	1	:vim	1	:*	0	:/Users/ccojocariu/workspace/brandless.com	1	vim	:vim client/app/home/containers/Home.tsx
+pane	0	1	:vim	1	:*	1	:/Users/ccojocariu/workspace/brandless.com/client	0	node	:node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build:development
+pane	0	1	:vim	1	:*	2	:/Users/ccojocariu/workspace/brandless.com	0	ruby	:puma 3.11.2 (tcp://localhost:3000) [brandless.com]  
+pane	0	1	:vim	1	:*	3	:/Users/ccojocariu/workspace/brandless.com	0	zsh	:
+window	0	1	1	:*	fa86,238x60,0,0[238x38,0,0,0,238x21,0,39{92x21,0,39,1,72x21,93,39,2,72x21,166,39,3}]
+state	0	

@@ -29,17 +29,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #export TERM="xterm-256color"
 if [ "$TMUX" = "" ]; then tmux; fi
-#PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-# HOMEBREW / GVM / REVEL
-export PATH=/usr/local/bin:$PATH:/usr/local/sbin:/opt
 
 function chpwd() {
     emulate -L zsh
       ls -a
 }
-#rvm
-# Load rvm into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(rbenv init -)"
