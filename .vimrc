@@ -7,9 +7,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 set clipboard=unnamedplus
-"execute pathogen#infect()
-
-:let @" = expand("%")
 
 Plugin 'tpope/vim-endwise'
 
@@ -41,7 +38,6 @@ Plugin 'bling/vim-airline'
 Plugin 'wincent/command-t'
 Plugin 'thoughtbot/vim-rspec'
 
-
 "Git Plugins
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'               "Adds git commands like :Gdiff, :Gstatus
@@ -59,6 +55,8 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
+Plugin 'jason0x43/vim-js-indent'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on "req
@@ -85,6 +83,7 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:syntastic_aggregate_errors = 1
 let g:vim_jsx_pretty_colorful_config = 1
 let g:airline#extensions#labline#left_sep = ' '
+let g:tsuquyomi_completion_detail = 1
 set background=dark
 
 if has('gui_running')
