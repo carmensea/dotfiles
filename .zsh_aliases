@@ -16,6 +16,7 @@ alias gc='git commit -v'
 alias gpoh='git push origin HEAD'
 alias gs='git status'
 alias gd='git diff'
+alias pretty='git commit -m "Make it prettier"'
 
 #js
 alias s_test='./script/start-test'

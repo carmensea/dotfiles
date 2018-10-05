@@ -7,6 +7,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 set clipboard=unnamedplus
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h15
+   endif
+endif
+
+highlight link SyntasticError SpellBad
+highlight link SyntasticWarning SpellCap
 
 Plugin 'tpope/vim-endwise'
 
@@ -21,6 +40,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'valloric/YouCompleteMe'
 
 "Navigation Plugins
 Plugin 'scrooloose/nerdtree'
@@ -29,7 +50,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+Plugin 'ctrlpvim/ctrlp.vim'
 
 "Functional Plugins
 Plugin 'itchyny/calendar.vim'
@@ -56,7 +77,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jason0x43/vim-js-indent'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'prettier/vim-prettier'
+Plugin 'ngmy/vim-rubocop'
 
 call vundle#end()
 filetype plugin indent on "req
@@ -262,6 +284,9 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }" Ignore some folders and files for CtrlP indexing
+
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 
 "Ctags
 "map \c to run ctags in folder
