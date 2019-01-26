@@ -24,6 +24,15 @@ if has("gui_running")
    endif
 endif
 
+highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
+
+" ^U moves lines up, ^D moves lines down.
+" Works in normal or visual select modes.
+nmap <C-[> [e
+nmap <C-]> ]e
+vmap <C-[> [egv
+vmap <C-]> ]egv
+
 highlight link SyntasticError SpellBad
 highlight link SyntasticWarning SpellCap
 

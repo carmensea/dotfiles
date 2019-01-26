@@ -4,6 +4,7 @@ alias get='curl -OL'
 
 alias lr='ls -hartl'
 
+alias python=python3
 alias b_client="cd ~/workspace/brandless.com/client"
 alias b_rails="cd ~/workspace/brandless.com"
 alias brandless="cd ~/workspace/brandless.com"

@@ -42,6 +42,7 @@ fn f10 = setinvnumber (gets rid of line count.)
 ;vs [file] = vertical split (put a space and you can tab into a new file)  
 ;e [file] = change into new file    
 ;Gblame = git blame  
+> - highlighting a block of code and hitting `shift + .` block indents
 
 FILE SEARCH WITHIN VIM  
 ctrl p = find a file by name  

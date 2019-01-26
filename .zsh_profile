@@ -15,7 +15,6 @@ export PATH=$HOME/bin:$PATH
 #test -d "$HOME/.rvm/bin" && PATH="$PATH:$HOME/.rvm/bin"
 #export PATH=$PATH:$HOME/.rvm/bin
 
-
 # Path changes are made non-destructive with PATH=new_path:$PATH   This is like A=A+B so we preserve the old path
 
 # Path order matters, putting /usr/local/bin before /usr/bin
@@ -74,3 +73,6 @@ export GREP_OPTIONS='--color=always'
 
 alias e="subl"
 alias be="bundle exec"
+export RBENV_ROOT=/usr/local/var/rbenv
+
+eval "$(rbenv init -)"
