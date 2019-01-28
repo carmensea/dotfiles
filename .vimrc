@@ -11,6 +11,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "set guifont=Inconsolata\ for\ Powerline:h15
 "let g:Powerline_symbols = 'fancy'
+
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -25,6 +26,12 @@ set termencoding=utf-8
 " endif
 
 highlight Visual cterm=bold ctermbg=Red ctermfg=NONE
+" sets underline
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 " ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
