@@ -24,7 +24,7 @@ if has("gui_running")
    endif
 endif
 
-highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
+highlight Visual cterm=bold ctermbg=Red ctermfg=NONE
 
 " ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
