@@ -9,20 +9,20 @@ call vundle#begin()
 set clipboard=unnamedplus
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
+"set guifont=Inconsolata\ for\ Powerline:h15
+"let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 
-if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Inconsolata\ for\ Powerline:h15
-   endif
-endif
+" if has("gui_running")
+"    let s:uname = system("uname")
+"    if s:uname == "Darwin\n"
+"       set guifont=Inconsolata\ for\ Powerline:h15
+"    endif
+" endif
 
 highlight Visual cterm=bold ctermbg=Red ctermfg=NONE
 
@@ -49,7 +49,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'valloric/YouCompleteMe'
 
 "Navigation Plugins
@@ -61,6 +61,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'TaDaa/vimade'
+Plugin 'itchyny/lightline.vim'
 
 "Functional Plugins
 Plugin 'itchyny/calendar.vim'

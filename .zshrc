@@ -25,7 +25,8 @@ plugins=(git github vundle ruby rails encode64 tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+plugins=(zsh-autosuggestions)
 
 export TERM="xterm-256color"
 if [ "$TMUX" = "" ]; then tmux; fi
