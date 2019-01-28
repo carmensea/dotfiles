@@ -71,7 +71,7 @@ Plugin 'thoughtbot/vim-rspec'
 
 "Git Plugins
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'               "Adds git commands like :Gdiff, :Gstatus
+Plugin 'tpope/vim-fugitive', {'on': []}               "Adds git commands like :Gdiff, :Gstatus
 
 "Search Plugins
 Plugin 'tpope/vim-unimpaired'
