@@ -150,7 +150,7 @@ vnoremap <C-t> "*y
 nnoremap <C-p> "+gP"
 vnoremap <C-p> "+gP"
 
- cmap w!! %!sudo tee > /dev/null/ %
+cmap w!! %!sudo tee > /dev/null/ %
 
 set backspace=indent,eol,start
 set history=100
