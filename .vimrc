@@ -26,11 +26,11 @@ endif
 
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 
-" ^U moves lines up, ^D moves lines down.
+" ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
-nmap <C-[> [e
+nmap <C-a> [e
 nmap <C-]> ]e
-vmap <C-[> [egv
+vmap <C-a> [egv
 vmap <C-]> ]egv
 
 highlight link SyntasticError SpellBad
@@ -60,6 +60,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'TaDaa/vimade'
 
 "Functional Plugins
 Plugin 'itchyny/calendar.vim'

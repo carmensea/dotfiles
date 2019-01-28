@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#export TERM="xterm-256color"
+export TERM="xterm-256color"
 if [ "$TMUX" = "" ]; then tmux; fi
 
 function chpwd() {
