@@ -17,7 +17,7 @@ alias gpoh='git push origin HEAD'
 alias gs='git status'
 alias gd='git diff'
 alias pretty='git commit -m "Make it prettier"'
-alias g-a='git add --all'
+alias g-a='git add -A'
 
 #js
 alias s_test='./script/start-test'
