@@ -5,9 +5,8 @@ alias get='curl -OL'
 alias lr='ls -hartl'
 
 alias python=python3
-alias b_client="cd ~/workspace/brandless.com/client"
-alias b_rails="cd ~/workspace/brandless.com"
-alias brandless="cd ~/workspace/brandless.com"
+alias b_client="cd ~"
+alias b_rails="cd ~"
 alias dot="cd ~/dotfiles"
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -18,6 +17,7 @@ alias gpoh='git push origin HEAD'
 alias gs='git status'
 alias gd='git diff'
 alias pretty='git commit -m "Make it prettier"'
+alias g-a='git add --all'
 
 #js
 alias s_test='./script/start-test'
