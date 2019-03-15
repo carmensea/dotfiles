@@ -4,6 +4,8 @@ alias get='curl -OL'
 
 alias lr='ls -hartl'
 
+alias kufak='cd ~/stitchfix/kufak-suite'
+alias referrals='cd ~/stitchfix/referrals'
 alias python=python3
 alias b_client="cd ~"
 alias b_rails="cd ~"

@@ -1,4 +1,5 @@
 #oh-my-zsh
+ZSH_DISABLE_COMPFIX=true
 ZSH=$HOME/.oh-my-zsh
 
 DEFAULT_USER="Carmen"
@@ -12,6 +13,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # General Aliases
+alias rake="noglob bundled_rake"
 alias ll="ls -l"
 alias la="ls -a"
 alias deploy="~/scripts/deployment_scripts/main_deploy.sh"
@@ -36,4 +38,7 @@ function chpwd() {
       ls -a
 }
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
