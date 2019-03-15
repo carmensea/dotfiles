@@ -9,8 +9,6 @@ call vundle#begin()
 set clipboard=unnamedplus
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" test this is
-
 "set guifont=Inconsolata\ for\ Powerline:h15
 "let g:Powerline_symbols = 'fancy'
 
