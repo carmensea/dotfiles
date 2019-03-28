@@ -12,11 +12,11 @@ select-pane -t 2
 split-window -h -p 50
 
 # run commands
-send -t 0 'kufak' ENTER
-send -t 1 b_client ENTER
-send -t 1 'yarn build:development' ENTER
-send -t 2 b_rails ENTER
-send -t 2 'rails s' ENTER
-send -t 3 'rails s' ENTER
+send -t 0 'referrals' ENTER
+send -t 1 'kufak' ENTER
+send -t 1 'invoker start invoker.ini --port=9500' ENTER
+send -t 2 'referrals' ENTER
+send -t 2 'invoker start invoker.ini --port=9600' ENTER
+send -t 3 'referrals' ENTER
 
 select-pane -t 0

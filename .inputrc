@@ -1,3 +1,8 @@
 set bell-style visible
 set completion-ignore-case on
 set show-all-if-ambiguous on
+
+# setl bell length to zero
+#setterm -blength 0
+# no bell
+set bell-style none

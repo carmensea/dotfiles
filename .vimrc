@@ -32,13 +32,13 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
-
+set tags=tags
 " ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
 nmap <C-a> [e
-nmap <C-]> ]e
+nmap <C-z> ]e
 vmap <C-a> [egv
-vmap <C-]> ]egv
+vmap <C-z> ]egv
 
 highlight link SyntasticError SpellBad
 highlight link SyntasticWarning SpellCap
@@ -325,3 +325,4 @@ let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets
 map <F10> :set invnumber
 
 vnoremap <silent> <leader>l :<C-U>REPLSendLine<cr>
+set tags=tags
