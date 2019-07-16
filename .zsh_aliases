@@ -4,6 +4,10 @@ alias get='curl -OL'
 
 alias lr='ls -hartl'
 
+alias update='git checkout . && git checkout master && git pull origin master && bundle && yarn install && rake db:migrate'
+alias elastic='cd ~/Downloads/elasticsearch-5.6.15 && bin/elasticsearch'
+alias vim="rvm use system do mvim -v"
+alias reload_ref="invoker reload referrals.hellblazer"
 alias kufak='cd ~/stitchfix/kufak-suite'
 alias referrals='cd ~/stitchfix/referrals'
 alias dasher='cd ~/stitchfix/dasher'
@@ -13,6 +17,7 @@ alias b_client="cd ~"
 alias b_rails="cd ~"
 alias dot="cd ~/dotfiles"
 alias ctags="`brew --prefix`/bin/ctags"
+alias glive='git stash && git checkout master && git stash && git pull && git reset --hard origin/master && gem install bundler && bundle install && yarn install && rake db:migrate && git stash'
 
 #git
 alias gap='git add --intent-to-add . && git add --patch'
@@ -53,3 +58,28 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
+
+referralsync() {
+  cd ~/stitchfix/
+  for string in referrals client-service fix-service hellblazer thenames survey-service scheduling-service styling-fee-service
+  do
+    echo " ---------- Syncing $string ---------- "
+    cd $string
+    glive
+    cd ~/stitchfix/
+  done
+  echo " ---------- Finished Syncing ---------- "
+}
+
+kufaksync(){
+  cd ~/stitchfix/
+  for string in mobile-service shipment-checkout-service checkout gregory exchange-service referrals client-service fix-service hellblazer thenames survey-service scheduling-service styling-fee-service
+  do
+    echo " ---------- Syncing $string ---------- "
+    cd $string
+    glive
+    cd ~/stitchfix/
+  done
+  echo " ---------- Finished Syncing ---------- "
+}
+

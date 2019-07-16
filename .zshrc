@@ -13,7 +13,8 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # General Aliases
-alias rake="noglob bundled_rake"
+#alias rake="noglob bundled_rake"
+alias rake='noglob rake'
 alias ll="ls -l"
 alias la="ls -a"
 alias deploy="~/scripts/deployment_scripts/main_deploy.sh"
@@ -30,6 +31,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(zsh-autosuggestions)
 
+export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
+
 export TERM="xterm-256color"
 if [ "$TMUX" = "" ]; then tmux; fi
 
@@ -43,3 +46,4 @@ function chpwd() {
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 ctags=/usr/local/bin/ctags
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"

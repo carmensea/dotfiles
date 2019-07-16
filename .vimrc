@@ -1,16 +1,14 @@
 set nocompatible               " be iproved
 filetype off                   " required!
-"esc is far away, let's try ;; to get us out of insert mode
-imap ;; <esc>
+
+"use ; in addition to : for vim commands
 :nmap ; :
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
 set clipboard=unnamedplus
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-"set guifont=Inconsolata\ for\ Powerline:h15
-"let g:Powerline_symbols = 'fancy'
 
 set encoding=utf-8
 set t_Co=256
@@ -18,21 +16,11 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 
-" if has("gui_running")
-"    let s:uname = system("uname")
-"    if s:uname == "Darwin\n"
-"       set guifont=Inconsolata\ for\ Powerline:h15
-"    endif
-" endif
-
+" sets color for visual mode and cursor background color
 highlight Visual cterm=bold ctermbg=Red ctermfg=NONE
-" sets underline
-augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
-augroup END
-set tags=tags
+set cursorline
+hi CursorLine guifg=NONE guibg=#2d3c45 ctermbg=239 gui=NONE term=NONE cterm=NONE
+
 " ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
 nmap <C-a> [e
@@ -40,10 +28,8 @@ nmap <C-z> ]e
 vmap <C-a> [egv
 vmap <C-z> ]egv
 
-highlight link SyntasticError SpellBad
-highlight link SyntasticWarning SpellCap
-
-Plugin 'tpope/vim-endwise'
+"highlight link SyntasticError SpellBad
+"highlight link SyntasticWarning SpellCap
 
 "Manage Plugins
 Plugin 'gmarik/vundle'                    "Vim plugin manager
@@ -52,29 +38,25 @@ Plugin 'gmarik/vundle'                    "Vim plugin manager
 Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-surround'               "Adds 'cs' command to change pair characters
 Plugin 'Townk/vim-autoclose'              "Adds closing pairs
-Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'valloric/YouCompleteMe'
+Plugin 'tpope/vim-endwise'
 
 "Navigation Plugins
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'          "Nerdtree doesn't work without this
 Plugin 'scrooloose/nerdcommenter'         "Adds easy comment and uncomment
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'majutsushi/tagbar'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'TaDaa/vimade'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'majutsushi/tagbar'
+Plugin 'christoomey/vim-tmux-navigator'   "Navigates between panes
+Plugin 'easymotion/vim-easymotion'        "Search in file with /
+Plugin 'ctrlpvim/ctrlp.vim'               "Tag generator
+Plugin 'TaDaa/vimade'                     "Fades one pane in lieu the active one
 
 "Functional Plugins
-Plugin 'itchyny/calendar.vim'
-Plugin 'esneider/YUNOcommit.vim'
-Plugin 'bling/vim-airline'
-Plugin 'wincent/command-t'
+Plugin 'itchyny/lightline.vim'            "Bottom line to display mode and file info
+Plugin 'esneider/YUNOcommit.vim'          "Reminder to commit msg
+Plugin 'wincent/command-t'                "Fuzzy search for vim, requires same vim ruby as rvm version
 Plugin 'thoughtbot/vim-rspec'
 
 "Git Plugins
