@@ -13,9 +13,9 @@ split-window -h -p 50
 
 # run commands
 send -t 0 'referrals' ENTER
-send -t 1 'kufak' ENTER
+send -t 1 'ref_ui' ENTER
 send -t 2 'referrals' ENTER
 #send -t 2 'invoker start invoker.ini --port=9600' ENTER
-send -t 3 'referrals' ENTER
+#send -t 3 'referrals' ENTER
 
 select-pane -t 0

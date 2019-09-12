@@ -1,5 +1,6 @@
 set nocompatible               " be iproved
 filetype off                   " required!
+set path+=**
 
 "use ; in addition to : for vim commands
 :nmap ; :
@@ -35,23 +36,23 @@ vmap <C-z> ]egv
 Plugin 'gmarik/vundle'                    "Vim plugin manager
 
 "Autocomplete Plugins
-Plugin 'alvan/vim-closetag'
+"Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-surround'               "Adds 'cs' command to change pair characters
 Plugin 'Townk/vim-autoclose'              "Adds closing pairs
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mattn/emmet-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'                "Adds end in ruby
 
 "Navigation Plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'          "Nerdtree doesn't work without this
 Plugin 'scrooloose/nerdcommenter'         "Adds easy comment and uncomment
-"Plugin 'majutsushi/tagbar'
 Plugin 'christoomey/vim-tmux-navigator'   "Navigates between panes
 Plugin 'easymotion/vim-easymotion'        "Search in file with /
 Plugin 'ctrlpvim/ctrlp.vim'               "Tag generator
 Plugin 'TaDaa/vimade'                     "Fades one pane in lieu the active one
+"Plugin 'majutsushi/tagbar'
 
 "Functional Plugins
 Plugin 'itchyny/lightline.vim'            "Bottom line to display mode and file info
@@ -76,6 +77,8 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
+Plugin 'dense-analysis/ale'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'prettier/vim-prettier'
 Plugin 'ngmy/vim-rubocop'
@@ -85,11 +88,10 @@ filetype plugin indent on "req
 
 "Vim Multiple Cursors Bindings
 let g:syntastic_sass_checkers=["sasslint"]
-let g:syntastic_scss_checkers=["sasslint"]
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
 "let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_next_key='<C-x>'
+"let g:multi_cursor_next_key='<C-x>'
 let g:multi_cursor_prev_key='<C-p>'
 "let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'

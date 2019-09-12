@@ -2,8 +2,8 @@ navigating my jawn:
 
 VIM:
 
-/cc - comment
-/cu - uncomment
+\cc - comment  
+\cu - uncomment  
 :%s/SEARCH/REPLACE/gc - this finds and replaces while asking you per instance  
 ctrl w R = swaps panes  
 ctrl ]  = jumps to definition  

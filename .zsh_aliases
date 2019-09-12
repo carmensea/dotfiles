@@ -10,6 +10,7 @@ alias vim="rvm use system do mvim -v"
 alias reload_ref="invoker reload referrals.hellblazer"
 alias kufak='cd ~/stitchfix/kufak-suite'
 alias referrals='cd ~/stitchfix/referrals'
+alias ref_ui='cd ~/stitchfix/referrals-ui'
 alias dasher='cd ~/stitchfix/dasher'
 alias hellblazer='cd ~/stitchfix/hellblazer'
 alias python=python3
