@@ -59,6 +59,8 @@ Plugin 'itchyny/lightline.vim'            "Bottom line to display mode and file 
 Plugin 'esneider/YUNOcommit.vim'          "Reminder to commit msg
 Plugin 'wincent/command-t'                "Fuzzy search for vim, requires same vim ruby as rvm version
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'               "Send tmux commands in vim (isn't working)
+Plugin 'benmills/vimux'                   "Run Tmux commands from vim in 20% window
 
 "Git Plugins
 Plugin 'airblade/vim-gitgutter'
@@ -184,7 +186,7 @@ set smartindent
 "enable fold based on indent with max level of 10
 set foldmethod=indent
 set foldnestmax=2
-set foldlevel=100
+set foldlevel=100000
 set foldenable
 
 set undofile                                      "allow per file undo persistance
@@ -244,11 +246,18 @@ nnoremap Q <nop>
 
 cnoreabbrev td tab drop
 
+" tslime.vim - Specs running in Tmux
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>w :call RunCurrentSpecFile()<CR>
 map <Leader>g :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>q :call RunLastSpec()<CR>
+map <Leader>m :call RunAllSpecs()<CR>
+
+"Open spec file in vertical pane
+map <Leader>s :vs<CR>\| :A<CR>
+
 "Spring rspec
 "let g:rspec_command = '!spring rspec {spec}'
 let g:rspec_command = '!RAILS_ENV=test bundle exec rspec {spec} --color --profile'
