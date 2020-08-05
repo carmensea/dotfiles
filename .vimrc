@@ -1,6 +1,5 @@
 set nocompatible               " be iproved
 filetype off                   " required!
-set path+=**
 
 "use ; in addition to : for vim commands
 :nmap ; :
@@ -51,16 +50,16 @@ Plugin 'scrooloose/nerdcommenter'         "Adds easy comment and uncomment
 Plugin 'christoomey/vim-tmux-navigator'   "Navigates between panes
 Plugin 'easymotion/vim-easymotion'        "Search in file with /
 Plugin 'ctrlpvim/ctrlp.vim'               "Tag generator
-Plugin 'TaDaa/vimade'                     "Fades one pane in lieu the active one
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 "Functional Plugins
 Plugin 'itchyny/lightline.vim'            "Bottom line to display mode and file info
 Plugin 'esneider/YUNOcommit.vim'          "Reminder to commit msg
 Plugin 'wincent/command-t'                "Fuzzy search for vim, requires same vim ruby as rvm version
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/tslime.vim'               "Send tmux commands in vim (isn't working)
 Plugin 'benmills/vimux'                   "Run Tmux commands from vim in 20% window
+Plugin 'vim-airline/vim-airline'          "Status bar for vim
+Plugin 'vim-airline/vim-airline-themes'
 
 "Git Plugins
 Plugin 'airblade/vim-gitgutter'
@@ -108,7 +107,9 @@ let g:closetag_emptyTags_caseSensitive = 1
 "displays all errors from all checkers together
 let g:syntastic_aggregate_errors = 1
 let g:vim_jsx_pretty_colorful_config = 1
-let g:airline#extensions#labline#left_sep = ' '
+" let g:airline#extensions#labline#left_sep = ' '
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+:let g:airline_statusline_ontop=1
 let g:tsuquyomi_completion_detail = 1
 set background=dark
 
@@ -123,7 +124,7 @@ endif
 "  map <Up> :echo "no!"<cr>
 "  map <Down> :echo "no!"<cr>
 
-" Pretty obvious defaults if you ask me...
+" save and save quit
   command! W :w
   command! Q :q
   command! Wq :wq
