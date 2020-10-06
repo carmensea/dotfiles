@@ -11,9 +11,9 @@ set clipboard=unnamedplus
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+"set t_Co=256
+"set fillchars+=stl:\ ,stlnc:\
+"set term=xterm-256color
 set termencoding=utf-8
 
 " sets color for visual mode and cursor background color
@@ -38,9 +38,9 @@ Plugin 'gmarik/vundle'                    "Vim plugin manager
 "Plugin 'alvan/vim-closetag'
 Plugin 'tpope/vim-surround'               "Adds 'cs' command to change pair characters
 Plugin 'Townk/vim-autoclose'              "Adds closing pairs
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mattn/emmet-vim'
-Plugin 'mattn/webapi-vim'
+"Plugin 'mg979/vim-visual-multi'           "Multiple cursors when editing
+"Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/webapi-vim'
 Plugin 'tpope/vim-endwise'                "Adds end in ruby
 
 "Navigation Plugins
@@ -50,7 +50,7 @@ Plugin 'scrooloose/nerdcommenter'         "Adds easy comment and uncomment
 Plugin 'christoomey/vim-tmux-navigator'   "Navigates between panes
 Plugin 'easymotion/vim-easymotion'        "Search in file with /
 Plugin 'ctrlpvim/ctrlp.vim'               "Tag generator
-Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'                "Shows list of methods in new pane
 
 "Functional Plugins
 Plugin 'itchyny/lightline.vim'            "Bottom line to display mode and file info
@@ -221,6 +221,7 @@ nmap <f3> :TagbarToggle<CR>
 " set smartindent
 set laststatus=2
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+set title
 
 "Search Stuff
 set hlsearch  " highlight previous search matches
@@ -314,7 +315,7 @@ nmap <F8> :TagbarToggle<CR>
 nmap <F12> :vs ~/github.com/carmensea/dotfiles/Sharpen.md
 
 "Emmet Plugin
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets.json')), "\n"))
+"let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets.json')), "\n"))
 
 map <F10> :set invnumber
 
