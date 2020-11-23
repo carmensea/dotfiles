@@ -5,9 +5,9 @@ echo "Loading ~/.bash_profile a shell script that runs in every new terminal you
 echo "Logged in as $USER at $(hostname)"
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Path for RVM
-test -d "$HOME/.rvm/bin" && PATH="$PATH:$HOME/.rvm/bin"
+#test -d "$HOME/.rvm/bin" && PATH="$PATH:$HOME/.rvm/bin"
 
 # Rbenv autocomplete and shims
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
