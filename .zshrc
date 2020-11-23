@@ -20,7 +20,6 @@ alias la="ls -a"
 alias deploy="~/scripts/deployment_scripts/main_deploy.sh"
 alias sudo="nocorrect sudo"
 alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
 source $HOME/.zsh_aliases
 source $HOME/.zsh_profile
 # Plugins to load, loc in  ~/.oh-my-zsh/custom/plugins/ Ex: plugins=(rails git textmate ruby lighthouse)
@@ -41,7 +40,6 @@ function chpwd() {
       ls -a
 }
 
-# eval "$(rbenv init -)"
 
 ctags=/usr/local/bin/ctags
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
@@ -50,10 +48,26 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$PATH:$HOME/.rvm/bin"
-## Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source $HOME/.zshenv
 
+#~/.rbenv/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/carmencojocariu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/carmencojocariu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/carmencojocariu/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/carmencojocariu/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

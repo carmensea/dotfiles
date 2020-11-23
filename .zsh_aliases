@@ -6,7 +6,6 @@ alias lr='ls -hartl'
 
 alias update='git checkout . && git checkout master && git pull origin master && bundle && yarn install && rake db:migrate'
 alias elastic='cd ~/Downloads/elasticsearch-5.6.15 && bin/elasticsearch'
-alias vim="rvm use system do mvim -v"
 alias reload_ref="invoker reload referrals.hellblazer"
 alias referrals='cd ~/stitchfix/referrals'
 alias ref_ui='cd ~/stitchfix/referrals-ui'

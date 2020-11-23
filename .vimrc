@@ -108,8 +108,9 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:syntastic_aggregate_errors = 1
 let g:vim_jsx_pretty_colorful_config = 1
 " let g:airline#extensions#labline#left_sep = ' '
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-:let g:airline_statusline_ontop=1
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline_statusline_ontop=1
+let g:airline_theme='raven'
 let g:tsuquyomi_completion_detail = 1
 set background=dark
 
