@@ -4,9 +4,6 @@ filetype off                   " required!
 "use ; in addition to : for vim commands
 :nmap ; :
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
 set clipboard=unnamedplus
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -31,8 +28,11 @@ vmap <C-z> ]egv
 "highlight link SyntasticError SpellBad
 "highlight link SyntasticWarning SpellCap
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 "Manage Plugins
-Plugin 'gmarik/vundle'                    "Vim plugin manager
+Plugin 'VundleVim/Vundle.vim'                    "Vim plugin manager
 
 "Autocomplete Plugins
 "Plugin 'alvan/vim-closetag'
