@@ -6,10 +6,6 @@ alias lr='ls -hartl'
 
 alias update='git checkout . && git checkout master && git pull origin master && bundle && yarn install && rake db:migrate'
 alias elastic='cd ~/Downloads/elasticsearch-5.6.15 && bin/elasticsearch'
-alias reload_ref="invoker reload referrals.hellblazer"
-alias referrals='cd ~/stitchfix/referrals'
-alias ref_ui='cd ~/stitchfix/referrals-ui'
-alias hellblazer='cd ~/stitchfix/hellblazer'
 alias python=python3
 alias b_client="cd ~"
 alias b_rails="cd ~"
@@ -56,28 +52,3 @@ extract () {
          echo "'$1' is not a valid file"
      fi
 }
-
-referralsync() {
-  cd ~/stitchfix/
-  for string in referrals client-service fix-service hellblazer thenames survey-service scheduling-service styling-fee-service
-  do
-    echo " ---------- Syncing $string ---------- "
-    cd $string
-    glive
-    cd ~/stitchfix/
-  done
-  echo " ---------- Finished Syncing ---------- "
-}
-
-kufaksync(){
-  cd ~/stitchfix/
-  for string in mobile-service shipment-checkout-service checkout gregory exchange-service referrals client-service fix-service hellblazer thenames survey-service scheduling-service styling-fee-service
-  do
-    echo " ---------- Syncing $string ---------- "
-    cd $string
-    glive
-    cd ~/stitchfix/
-  done
-  echo " ---------- Finished Syncing ---------- "
-}
-

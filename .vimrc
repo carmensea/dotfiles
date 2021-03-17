@@ -83,6 +83,7 @@ Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'jason0x43/vim-js-indent'
 Plugin 'prettier/vim-prettier'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'jaxbot/semantic-highlight.vim'
 
 call vundle#end()
 filetype plugin indent on "req
@@ -145,7 +146,7 @@ endif
 vnoremap <C-t> "*y
 nnoremap <C-p> "+gP"
 vnoremap <C-p> "+gP"
-
+vnoremap <silent> <leader>l :<C-U>REPLSendLine<cr>
 cmap w!! %!sudo tee > /dev/null/ %
 
 set backspace=indent,eol,start
