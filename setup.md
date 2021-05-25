@@ -52,6 +52,7 @@ $ ln -s ~/dotfiles/.zsh_aliases
 $ ln -s ~/dotfiles/.zsh_profile
 $ ln -s ~/dotfiles/.zshrc
 
+### install git
 
 ### install vundle
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
