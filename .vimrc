@@ -14,9 +14,9 @@ set encoding=utf-8
 set termencoding=utf-8
 
 " sets color for visual mode and cursor background color
-highlight Visual cterm=bold ctermbg=Red ctermfg=NONE
-set cursorline
-hi CursorLine guifg=NONE guibg=#2d3c45 ctermbg=239 gui=NONE term=NONE cterm=NONE
+highlight Visual cterm=bold ctermbg=Red ctermfg=green
+"set cursorline
+"hi CursorLine guifg=NONE guibg=#2d3c45 ctermbg=239 gui=NONE term=NONE cterm=NONE
 
 " ctrl a  moves lines up, ctrl ] moves lines down.
 " Works in normal or visual select modes.
