@@ -57,19 +57,11 @@ $ ln -s ~/dotfiles/.zshrc
 ### install vundle
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
 
+### quit terminal and restart
+
 ###install plugins
 $ vim .vimrc
 
 :PluginInstall
 
-### rbenv
-$ brew install rbenv
-
-### setup shell with rbenv
-$ rbenv init
-
-### quit terminal and restart
-
-### run doctor to ensure things are going well
-$ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-
+### install chruby and ruby-install

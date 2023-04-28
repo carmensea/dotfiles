@@ -12,8 +12,8 @@ select-pane -t 2
 split-window -h -p 50
 
 # run commands
-send -t 0 'cd stitch_fix' ENTER
-send -t 1 'cd stitch_fix' ENTER
-send -t 2 'cd stitch_fix' ENTER
+send -t 0 'cd stitchfix' ENTER
+send -t 1 'cd stitchfix' ENTER
+send -t 2 'cd stitchfix' ENTER
 
 select-pane -t 0
