@@ -31,7 +31,6 @@ typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
 
 plugins=(tmux git github vundle ruby rails encode64)
 
-# this must be after we source omz
 ZSH_TMUX_AUTOSTART=true
 
 # SOURCE
@@ -46,7 +45,7 @@ source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
-#tmux
+
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats 'on %b'
 # Set up the prompt (with git branch name)
